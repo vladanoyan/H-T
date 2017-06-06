@@ -8,7 +8,6 @@ import {Square2,Square3} from './square2';
 import Content1 from './home';
 import Content2 from './home1';
 import Content3 from './home2';
-import {Button,Button1,Button2} from './button';
 
 
 
@@ -35,7 +34,15 @@ const v1=[
 
 
 class App extends Component {
+
   render() {
+      const array= v1.map(function (arjeq,index) {
+          return (
+              <div key={index}>
+                  <Square panun={arjeq} />
+              </div>
+          )
+      });
       return (
           <div className="App">
               <div className="contentItems">
@@ -43,9 +50,7 @@ class App extends Component {
                   <Content2 />
                   <Content3 />
               </div>
-              <Button />
-              <Button1 />
-              <Button2 />
+
               <div id="container"></div>
 
               <My />
@@ -65,13 +70,7 @@ class App extends Component {
           </div>
       );
 
-      const array= v1.map(function (arjeq,index) {
-        return (
-            <div key={index}>
-            <Square panun={arjeq} />
-      </div>
-      )
-    });
+
   }
 }
 

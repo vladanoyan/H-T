@@ -3,49 +3,34 @@
  */
 import React, { Component } from 'react';
 import './square.css';
+import {Button} from './button';
 
 
 
 
 class Content1 extends Component {
-    // constructor(props){
-    //     super(props);
-    //     this.state= {
-    //         test: false
-    //     }
-    //     this.clone= this.clone.bind(this);
-    // }
-    // clone(){
-    //     let sq= document.getElementsByClassName("content1")[0];
-    //     let cont = document.getElementById("container");
-    //     const neval1 =  cont.appendChild(sq);
-    //     this.setState({ test1: neval1 });
-    //
-    //
-    //
-    // }
-
-    constructor(props){
+        constructor(props){
         super(props);
         this.state= {
-            tesy: false
+            home: false
         }
         this.circle= this.circle.bind(this);
     }
     circle(){
-        let ri= this.state.tesy ? false : true;
-        this.setState({ tesy: ri })
-
-
+        let pi1 = document.getElementsByClassName("content1")[0];
+        let ri= this.state.home ? false : true;
+        this.setState({ home: ri });
+        setTimeout(function(){
+           pi1.style.display = 'none';
+        }, 1000);
 
     }
     render() {
 
         return(
             <div>
-            <div className={ this.state.tesy ? 'content1' : 'my-class' } onClick={this.clone}>
-                    1
-            </div>
+            <div className={ this.state.home ? 'my-class' : 'content1' } onClick={this.circle} >1</div>
+                <Button  />
             </div>
     );
 

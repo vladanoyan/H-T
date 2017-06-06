@@ -106,11 +106,21 @@ div.square4:hover .square{
 {
     animation: mymove 1s infinite;
     background-color: SILVER;
+    display: inline-block;
+    width:100px;
+    height:100px;
+    margin:20px;
+    border:1px solid black;
 }
 
 .my-class2 {
     animation: mymove 1s infinite;
     background-color: YELLOW;
+    display: inline-block;
+    width:100px;
+    height:100px;
+    margin:20px;
+    border:1px solid black;
 }
 
 #container

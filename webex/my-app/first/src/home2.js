@@ -3,29 +3,35 @@
  */
 import React, { Component } from 'react';
 import './square.css';
+import {Button2} from './button';
 
 
 class Content3 extends Component {
     constructor(props){
         super(props);
         this.state= {
-            test: false
+            tesy1: false
         }
-        this.clone= this.clone.bind(this);
+        this.circle2= this.circle2.bind(this);
     }
-    clone(){
-        let ss= document.getElementsByClassName("content3")[0];
-        let cont = document.getElementById("container");
-        const neval1 =  cont.appendChild(ss);
-        this.setState({ test1: neval1 });
-
-
+    circle2(){
+        let pi2 = document.getElementsByClassName("content3")[0];
+        let rii= this.state.tesy1 ? false : true;
+        this.setState({ tesy1: rii });
+        setTimeout(function(){
+            pi2.style.display = 'none';
+        }, 1000);
 
     }
-
     render() {
 
-        return <div className="content3" onClick={this.clone}>3</div>;
+        return (
+            <div>
+            <div className={ this.state.tesy1 ? 'my-class2' : 'content3'} onClick={this.circle2}>3</div>
+            <Button2 />
+
+            </div>
+        );
 
     }
 }
