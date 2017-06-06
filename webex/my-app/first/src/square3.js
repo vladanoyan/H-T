@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import './square.css';
 
 
-class square4 extends Component {
+class Square4 extends Component {
     render() {
 
         return <div className="square4"></div>;
@@ -13,6 +13,6 @@ class square4 extends Component {
     }
 }
 
-export default square4;
+export default Square4;
 
 

@@ -8,6 +8,8 @@ import './square.css';
 class Button extends Component {
     clone(){
         let sm= document.getElementsByClassName("content1")[0];
+        sm.style.display = 'block';
+
         let cont = document.getElementById("container");
         cont.appendChild(sm);
     }
@@ -25,6 +27,7 @@ class Button extends Component {
 
 class Button1 extends Component {
     clone1(){
+
         let sm= document.getElementsByClassName("content2")[0];
         let cont = document.getElementById("container");
         cont.appendChild(sm);

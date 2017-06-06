@@ -39,7 +39,7 @@ class App extends Component {
       const array= v1.map(function (arjeq,index) {
           return (
               <div key={index}>
-                  <Square panun={arjeq} />
+                  <My panun={arjeq} />
               </div>
           )
       });
@@ -53,7 +53,6 @@ class App extends Component {
 
               <div id="container"></div>
 
-              <My />
               <div className="App-header">
                   <img src={logo} className="App-logo" alt="logo" />
                   <h2>Welcome to React</h2>
@@ -62,6 +61,7 @@ class App extends Component {
                   To get started, edit <code>src/App.js</code> and save to reload.
               </p>
               {array}
+              <Square />
               <Square4 />
               <Square2 />
               <Square3 />
