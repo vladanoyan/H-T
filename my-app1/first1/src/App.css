@@ -30,6 +30,8 @@
   border:1px solid;
   display: inline-block;
   margin: 20px;
+  color:#fff;
+  border-radius: 15px;
 }
 
 
@@ -40,6 +42,8 @@
   border:1px solid;
   display: inline-block;
   margin: 20px;
+  color:#fff;
+  border-radius: 15px;
 }
 
 .blue{
@@ -49,6 +53,8 @@
   border:1px solid;
   display: inline-block;
   margin: 20px;
+  color:#fff;
+  border-radius: 15px;
 }
 
 button{
@@ -63,20 +69,51 @@ button{
 }
 .my-class
 {
-  animation: mymove 4s infinite;
-  background-color: orange;
-  width: 10px;
-  height: 10px;
+  transform: rotate(3600deg);
+  transition-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 5px;
+  height: 5px;
+  background-color:yellow;
   display: inline-block;
-  margin: 20px;
-  border-radius: 15px;
-  color: #fff;
+  border-radius:50%;
   outline: none;
-  border:1px solid black;
-  transition: width 3s;
+  color:#fff;
+}
+.my-class1
+{
+  transform: rotate(3600deg);
+  transition-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 5px;
+  height: 5px;
+  background: orange;
+  display: inline-block;
+  border-radius:50%;
+  outline: none;
+  color:#fff;
+}
+.my-class2
+ {
+  transform: rotate(3600deg);
+  transition-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 5px;
+  height: 5px;
+  background: purple;
+  display: inline-block;
+  border-radius:50%;
+  outline: none;
+  color:#fff;
 }
 
-@keyframes mymove{
-  from { transform: rotate(0deg); }
-  to { transform: rotate(3600deg); }
+#container
+{
+  width:550px;
+  height:150px;
+  border:1px solid black;
+  margin:0 auto;
 }
