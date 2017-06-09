@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Work from './work';
+
 
 class App extends Component {
   constructor(props){
@@ -19,26 +21,10 @@ class App extends Component {
   red1(){
     this.setState({red:"սպիտակ"});
     setTimeout(function(){
-      document.getElementsByClassName("my-class")[0].style.display = 'none';
+        document.getElementsByClassName("my-class")[0].style.display = 'none';
     }, 2000);
     console.log(this);
   }
-    clone(event){
-        let x = event.target;
-        let cont = document.getElementById("container");
-        cont.appendChild(x);
-        x.onclick = function () {
-          let y = Math.floor((Math.random() * 1000000) + 1);
-          if (y%2==0 && y>150000){
-              x.style.background="purple";
-              x.innerHTML=y+"<br>"+"zuyg";
-          }
-          else {
-              x.style.background="magenta";
-              x.innerHTML=y+"<br>"+"kent";
-          }
-        }
-    }
 
   green1(){
     this.setState({green:"սեվ"});
@@ -55,6 +41,22 @@ class App extends Component {
     }, 2000);
     console.log(this);
   }
+    clone(event){
+        let x = event.target;
+        let cont = document.getElementById("container");
+        cont.appendChild(x);
+        x.onclick = function () {
+            let y = Math.floor((Math.random() * 1000000) + 1);
+            if (y%2===0 && y>150000){
+                x.style.background="purple";
+                x.innerHTML=y+"<br>"+"zuyg";
+            }
+            else {
+                x.style.background="magenta";
+                x.innerHTML=y+"<br>"+"kent";
+            }
+        }
+    }
 
   render() {
     return (
@@ -67,7 +69,9 @@ class App extends Component {
           <button onClick={this.green1}>{this.state.green}</button>
           <button onClick={this.blue1}>{this.state.blue}</button>
           <div id="container"></div>
+
         </div>
+          <Work />
       </div>
     );
   }
