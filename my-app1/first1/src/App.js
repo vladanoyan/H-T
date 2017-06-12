@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Work from './work';
+import Button from './button';
+import Modal from './components/li/modal';
 
 
 class App extends Component {
@@ -72,6 +74,8 @@ class App extends Component {
 
         </div>
           <Work />
+            <Button />
+          <Modal />
       </div>
     );
   }

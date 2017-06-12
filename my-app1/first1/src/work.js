@@ -32,7 +32,7 @@ class App1 extends Component {
     render() {
         const rez=tiv.map( (item,index) => {
             return this.state.bclicked===true ? <Print pop={item} key={index} /> :""
-        })
+        });
 
         return (
 
@@ -40,10 +40,8 @@ class App1 extends Component {
                 <ul>
                     {rez}
 
-                    </ul>
+                </ul>
                 <button onClick={this.cikl}> + li </button>
-
-
 
             </div>
     );
