@@ -20,21 +20,15 @@ class Modal extends Component {
     }
     handleSubmit(event) {
         event.preventDefault();
-       this.setState({ password: true });
         this.setState({ usernamed: true });
+        this.setState({ password: true });
 
     }
 
 
     myModal(){
         this.setState({ clicked: true });
-        document.getElementsByClassName("modal")[0].style.display="block";
-
-
     }
-
-
-
 
 
 
@@ -44,13 +38,13 @@ class Modal extends Component {
         return (
             <div>
                 <button onClick={this.myModal}>Modal Log</button>
-                <div className="modal">
+                <div className={this.state.clicked ? 'modal1' : 'modal'}>
                     <div className="mymodal">
                         <form >
                             <Input  type="text" isRequired={true} />
-                            <div className={ this.state.username ? 'hidden' : 'hidden1'}>please enter the name</div>
+                            <div className={ this.state.username ? 'hidden1' : 'hidden'}>please enter the name</div>
                              <Input type="password" isRequired={true} />
-                            <div  className={ this.state.username ? 'hidden' : 'hidden1' }>please enter the password</div>
+                            <div  className={ this.state.password ? 'hidden1' : 'hidden' }>please enter the password</div>
 
 
                             <button onClick={this.handleSubmit} className="button1">LogIn</button>

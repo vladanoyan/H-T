@@ -51,7 +51,17 @@ border-radius:0;
 
 
 }
-
+.modal1{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    padding:120px 20px;
+    background: rgba(51, 49, 49, 0.73);
+    display: block;
+}
 .button1:hover {
 opacity: 0.8;
 }
