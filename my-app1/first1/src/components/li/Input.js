@@ -1,6 +1,3 @@
-/**
- * Created by vlad on 6/11/17.
- */
 
 import React, { Component } from 'react';
 import './modal.css';
@@ -30,7 +27,7 @@ constructor(props){
     render() {
 
 
-        const className = this.state.isValid ? '' : 'hidden3';
+        const className = this.state.isValid ? '' : 'hidden3 shake';
 
         return (
             <div>
