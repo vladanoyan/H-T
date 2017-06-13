@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Input from './input';
 
-
+let m=0;
 class App1 extends Component {
     constructor(props){
         super(props);
@@ -29,47 +29,32 @@ class App1 extends Component {
     }
 
 
-
-// this.setState({hover1: true });
-// this.setState({hover2: true });
-// this.setState({hover3: true });
-// this.setState({hover4: true });
-// this.setState({hover5: true });
-// this.setState({hover6: true });
-// this.setState({hover7: true });
-// this.setState({hover8: true });
-// this.setState({hover9: true });
-// this.setState({hover10: true });
-// this.setState({hover11: true });
-// this.setState({hover12: true });
-// this.setState({hover13: true });
-// this.setState({hover14: true });
-
-
-
-
     render() {
+
+        if( document.getElementsByClassName("hover").clicked==true )
+        {
+            m=m+1
+        }
+        console.log(m);
         return (
             <div className="App1">
-                <div onClick={() => this.setState({ hover: true })} className={ this.state.hover ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover1: true })} className={ this.state.hover1 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover2: true })} className={ this.state.hover2 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover3: true })} className={ this.state.hover3 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover4: true })} className={ this.state.hover4 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover5: true })} className={ this.state.hover5 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover6: true })} className={ this.state.hover6 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover7: true })} className={ this.state.hover7 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover8: true })} className={ this.state.hover8 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover9: true })} className={ this.state.hover9 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover10: true })} className={ this.state.hover10 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover11: true })} className={ this.state.hover11 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover12: true })} className={ this.state.hover12 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover13: true })} className={ this.state.hover13 ? 'hover1' : 'hover'}></div>
-                <div onClick={() => this.setState({hover14: true })} className={ this.state.hover14 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({ hover: !this.state.hover })} className={ this.state.hover ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover1: !this.state.hover1 })} className={ this.state.hover1 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover2: !this.state.hover2 })} className={ this.state.hover2 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover3: !this.state.hover3 })} className={ this.state.hover3 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover4: !this.state.hover4 })} className={ this.state.hover4 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover5: !this.state.hover5 })} className={ this.state.hover5 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover6: !this.state.hover6 })} className={ this.state.hover6 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover7: !this.state.hover7 })} className={ this.state.hover7 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover8: !this.state.hover8 })} className={ this.state.hover8 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover9: !this.state.hover9 })} className={ this.state.hover9 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover10: !this.state.hover10 })} className={ this.state.hover10 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover11: !this.state.hover11 })} className={ this.state.hover11 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover12: !this.state.hover12 })} className={ this.state.hover12 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover13: !this.state.hover13 })} className={ this.state.hover13 ? 'hover1' : 'hover'}></div>
+                <div onClick={() => this.setState({hover14: !this.state.hover14 })} className={ this.state.hover14 ? 'hover1' : 'hover'}></div>
 
                 <Input />
-
-
             </div>
     );
     }

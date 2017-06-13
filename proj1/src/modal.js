@@ -5,9 +5,6 @@ import './App.css';
 
 class Modal extends Component {
 
-
-
-
     render() {
 
 
@@ -17,6 +14,7 @@ class Modal extends Component {
                     <div className="mymodal">
                         <h1 className={this.props.color}>{this.props.text}</h1>
                     </div>
+                    <button onClick={this.props.open}>TRY AGAIN</button>
                 </div>
             </div>
 
