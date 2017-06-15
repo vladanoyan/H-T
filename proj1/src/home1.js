@@ -3,7 +3,6 @@
  */
 import React, { Component } from 'react';
 import './App.css';
-import Input from './input';
 
 class App1 extends Component {
     constructor(props){
@@ -21,7 +20,6 @@ class App1 extends Component {
             <div className="App1">
 
 
-                <Input />
             </div>
     );
     }

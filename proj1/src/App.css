@@ -120,7 +120,46 @@ button{
   color:#c72a1a;
   box-shadow: 0 36px 21px 0;
 }
+.divshow{
+  width: 50px;
+  height: 50px;
+  background: orange;
+  border: 2px solid black;
+}
+.left{
+  margin-left: 100% !important;
+  width: 50px;
+  height: 50px;
+  background: orange;
+  border: 2px solid black;
+  transition: margin-left 7s;
+}
+.left1{
+   margin-left:100% !important;
+   width: 50px;
+   height: 50px;
+   background: orange;
+   border: 2px solid black;
+   transition: margin-left 6s;
+ }
 
+.left2{
+  margin-left:100% !important;
+  width: 50px;
+  height: 50px;
+  background: orange;
+  border: 2px solid black;
+  transition: margin-left 5s;
+}
+.block{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 0;
+}
+.none{
+  display: none;
+}
 .modal{
   position: fixed;
   top: 0;
@@ -142,4 +181,5 @@ button{
   padding:120px 20px;
   background: rgba(51, 49, 49, 0.73);
   display: block;
+  text-align: center;
 }

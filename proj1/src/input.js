@@ -6,6 +6,8 @@ import './App.css';
 import Modal from './modal';
 let arr=[];
 console.log(arr);
+let count=0;
+
 
 class App1 extends Component {
     constructor(props){
@@ -17,22 +19,13 @@ class App1 extends Component {
             text1:"",
             color:"mymodalh1",
             show:false,
-            hid:false
+            hid:false,
+            divshow:false,
+            block:false,
+            color2:"orange"
 
 
 
-        }
-    }
-
-    check(){
-        if(this.state.value1==="orange"){
-            this.setState({clicked:true});
-            this.setState({text1:"YOU WON !!!"});
-        }
-        else{
-            this.setState({clicked:true});
-            this.setState({text1:"YOU LOSE !!!"});
-            this.setState({color:"mymodalh2"});
         }
     }
 
@@ -48,7 +41,9 @@ class App1 extends Component {
 
     }
     cloes(){
-        this.setState({clicked:false})
+        this.setState({clicked:false});
+        this.setState({divshow:false});
+
     }
 
     sho(){
@@ -65,20 +60,55 @@ class App1 extends Component {
         m.innerHTML = arr;
         this.setState({value1: ""});
     }
+
+    divs2(){
+        this.setState({block:true});
+
+}
+    divs(){
+       this.setState({divshow:true});
+        setTimeout(function () {
+        this.setState({clicked:true, text1:"YOU WON !!!" + count});
+
+        }.bind(this),7000)
+
+    }
+
+    divclick(event){
+        count=count+1;
+
+        console.log(count);
+
+        let y = Math.floor((Math.random() * 1000000) + 1);
+        this.setState({color2 : "#" + y});
+
+    }
     render() {
 
 return (
             <div className="App1">
                 <input className="chek"  type="checkbox" onChange={this.checked.bind(this)}/>
                 <input className={this.state.search1 ? 'search1' : 'search'}  type="text" onChange={this.valuechek.bind(this)} value={this.state.value1} placeholder="YOUR TEXT HERE" />
-                <input className="chek"  type="radio" name="one" onChange={this.sho.bind(this)}/>
-                <input className="chek"  type="radio" name="two" onChange={this.hid.bind(this)}/>
+                <input className="chek"  type="radio" name="one" onChange={this.sho.bind(this)}/>show
+                <input className="chek"  type="radio" name="two" onChange={this.hid.bind(this)}/>button
                 <button className={this.state.hid ? "hidbat":"hidbat1"} onClick={this.copy.bind(this)}>push</button>
 
-                <div className={this.state.show ? 'container' : 'container1'}></div>
+                <div className={this.state.show ? 'container' : 'container1'} ></div>
                 <br/>
-                <button onClick={this.check.bind(this)}>check </button>
                 <Modal modal={this.state.clicked ? 'modal1' : 'modal'} text={this.state.text1} color={this.state.color} open={this.cloes.bind(this)} />
+                <input className="chek"  type="radio" name="trees" onChange={this.divs2.bind(this)}/>show divs
+                <div  className={this.state.block ? 'block' : 'none'}>
+                <button type="radio"  onClick={this.divs.bind(this)}>play</button>
+                <hr/>
+                <div style={{background:this.state.color2}} className={this.state.divshow ? 'left' : 'divshow'} onClick={this.divclick.bind(this)}></div>
+                <hr/>
+                <div style={{background:this.state.color2}} className={this.state.divshow ? 'left1' : 'divshow'} onClick={this.divclick.bind(this)}></div>
+                <hr/>
+                <div style={{background:this.state.color2}} className={this.state.divshow ? 'left2' : 'divshow'} onClick={this.divclick.bind(this)}></div>
+                <hr/>
+                </div>
+
+
             </div>
         );
     }
