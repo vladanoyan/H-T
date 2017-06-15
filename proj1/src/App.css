@@ -3,9 +3,11 @@
   
 }
 
-.App1{
-  clear: both;
-  text-align: left;
+#nk{
+  width: 16vw;
+  float: left;
+  height: 12vw;
+  margin: 5px;
 }
 .chek
 {
@@ -182,4 +184,49 @@ button{
   background: rgba(51, 49, 49, 0.73);
   display: block;
   text-align: center;
+}
+.slider{
+  width: 150px;
+  height: 128px;
+  border:1px solid black;
+  margin: 10px;
+  display: inline-flex;
+  background: #fff;
+  position: relative;
+}
+.containerSlid
+{
+  max-width: 550px;
+  margin: 0 auto;
+  border:2px solid black;
+  clear: both;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 53px;
+  background: #eee;
+}
+.slider>img{
+  width:100%;
+}
+.fa-angle-right{
+  position: absolute;
+  right: 0;
+  top: 38%;
+  font-size: 37px;
+  color: #fff;
+
+}
+.fa-angle-left{
+  position: absolute;
+  left: 0;
+  top: 38%;
+  font-size: 37px;
+  color: #fff;
+
 }

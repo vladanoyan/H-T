@@ -4,6 +4,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Modal from './modal';
+
+
 let arr=[];
 console.log(arr);
 let count=0;
@@ -22,7 +24,6 @@ class App1 extends Component {
             hid:false,
             divshow:false,
             block:false,
-            color2:"orange"
 
 
 
@@ -76,12 +77,8 @@ class App1 extends Component {
 
     divclick(event){
         count=count+1;
-
-        console.log(count);
-
         let y = Math.floor((Math.random() * 1000000) + 1);
-        this.setState({color2 : "#" + y});
-
+        event.target.style.background="#"+y;
     }
     render() {
 
@@ -100,11 +97,11 @@ return (
                 <div  className={this.state.block ? 'block' : 'none'}>
                 <button type="radio"  onClick={this.divs.bind(this)}>play</button>
                 <hr/>
-                <div style={{background:this.state.color2}} className={this.state.divshow ? 'left' : 'divshow'} onClick={this.divclick.bind(this)}></div>
+                <div  id="gg" className={this.state.divshow ? 'left' : 'divshow'} onClick={this.divclick.bind(this)}></div>
                 <hr/>
-                <div style={{background:this.state.color2}} className={this.state.divshow ? 'left1' : 'divshow'} onClick={this.divclick.bind(this)}></div>
+                <div id="rr" className={this.state.divshow ? 'left1' : 'divshow'} onClick={this.divclick.bind(this)}></div>
                 <hr/>
-                <div style={{background:this.state.color2}} className={this.state.divshow ? 'left2' : 'divshow'} onClick={this.divclick.bind(this)}></div>
+                <div  id="ff" className={this.state.divshow ? 'left2' : 'divshow'} onClick={this.divclick.bind(this)}></div>
                 <hr/>
                 </div>
 

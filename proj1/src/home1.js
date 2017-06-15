@@ -1,28 +1,39 @@
-/**
- * Created by vlad on 6/12/17.
- */
+
 import React, { Component } from 'react';
 import './App.css';
+import Lightbox from 'react-image-lightbox';
 
-class App1 extends Component {
+
+
+class ShowImage extends Component {
     constructor(props){
         super(props);
         this.state={
-
+            bace:false
         }
     }
 
 
-    render() {
 
+    render() {
+        const {bace}=this.state;
+        let {hasce, nkaragrutyun} = this.props;
+        hasce = require(`./image/${hasce}`);
 
         return (
-            <div className="App1">
+                <div id="nk">
+                    <img id="nk" src={hasce} onClick={()=>this.setState({bace:true})}/>
+                    <div>{nkaragrutyun}</div>
+                    {bace &&
+                    <Lightbox
+                        mainSrc={hasce}
+                        onCloseRequest ={()=> this.setState({bace:false})}
+                    />
+                    }
+                </div>
 
-
-            </div>
     );
     }
 }
 
-export default App1;
+export default ShowImage;

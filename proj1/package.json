@@ -7,6 +7,7 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "react-image-lightbox": "^4.1.0",
     "react-scripts": "1.0.7"
   },
   "scripts": {
