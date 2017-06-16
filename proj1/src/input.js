@@ -1,13 +1,10 @@
-/**
- * Created by vlad on 6/12/17.
- */
+
 import React, { Component } from 'react';
 import './App.css';
 import Modal from './modal';
 
 
 let arr=[];
-console.log(arr);
 let count=0;
 
 

@@ -200,33 +200,43 @@ button{
   margin: 0 auto;
   border:2px solid black;
   clear: both;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   top: 53px;
   background: #eee;
 }
-.slider>img{
+.containerSlid>div{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-inline-flex;
+  display: Inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.slider img{
   width:100%;
+
 }
 .fa-angle-right{
   position: absolute;
-  right: 0;
-  top: 38%;
   font-size: 37px;
-  color: #fff;
-
+  color: #d3caca;
+  right: 11px;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fa-angle-left{
   position: absolute;
-  left: 0;
-  top: 38%;
   font-size: 37px;
-  color: #fff;
-
+  color: #d3caca;
+  left: 11px;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Input from './input';
-import ShowImage from './home1';
+import ShowImages from './home1';
 import Slider from './slider';
 
 
@@ -32,10 +32,10 @@ class App extends Component {
 
   render() {
       const info = nkarner.map((item,index) =>{
-          return <ShowImage
+          return <ShowImages
               hasce = {item.url}
               nkaragrutyun={item.discription}
-         key={item.id} />
+               key={index} />
       });
 
 
@@ -46,9 +46,7 @@ class App extends Component {
 
           {info}
 
-          <div className="containerSlid">
-            <Slider />
-          </div>
+            <Slider/>
       </div>
     );
   }
