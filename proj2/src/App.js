@@ -6,6 +6,7 @@ import Material from './component/material';
 import GridListExampleSingleLine from './component/material1';
 import AutoCompleteExampleMenuProps from './component/auto';
 import Inputs from './inputs';
+import Game from './game';
 
 class App extends Component {
   constructor(props){
@@ -32,7 +33,7 @@ this.setState({z:y,u:p,m:e});
   render() {
     return (
       <div className="App">
-
+<div className="none">
         <Input />
         <Inputs />
 
@@ -57,6 +58,9 @@ this.setState({z:y,u:p,m:e});
           <br/>
           <button className="imgbtn" onClick={this.animate.bind(this)}>push me</button>
         </div>
+</div>
+          <br/><br/><br/>
+          <Game />
 
 
 

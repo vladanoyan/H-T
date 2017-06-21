@@ -54,3 +54,127 @@
   top: 115px;
   z-index: 5;
   left: 67%;}
+
+button{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 25px;
+  display: inline-block;
+  box-sizing: border-box;
+  outline:none;
+  color: white;
+  background: purple;
+}
+
+
+.mymodal{
+  position: relative;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  max-width: 600px;
+  margin: 0 auto;
+  padding:25px;
+}
+.mymodalh1{
+  color:greenyellow;
+  box-shadow: 0 36px 21px 0;
+}
+
+.mymodalh2{
+  color:#c72a1a;
+  box-shadow: 0 36px 21px 0;
+}
+.divshow{
+  width: 50px;
+}
+.divshow2{
+  width: 50px;
+  margin-left: 90%;
+}
+.left{
+  margin-left: 100% !important;
+  width: 50px;
+  transition: margin-left 7s;
+}
+.left1{
+  margin-left:100% !important;
+  width: 50px;
+  height: 114px;
+  transition: margin-left 6s;
+}.left3{
+   margin-left:-10% !important;
+   width: 50px;
+   height: 114px;
+   transition: margin-left 6s;
+ }
+
+.left2{
+  margin-left:100% !important;
+  width: 50px;
+  transition: margin-left 5s;
+}
+.block{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 200px 0;
+}
+.none{
+  display: none;
+}
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  padding:120px 20px;
+  background: rgba(51, 49, 49, 0.73);
+  display: none;
+}
+.modal1{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  padding:120px 20px;
+  background: rgba(51, 49, 49, 0.73);
+  display: block;
+  text-align: center;
+}
+.modal3{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  padding:120px 20px;
+  background: rgba(51, 49, 49, 0.73);
+  display: none;
+}
+.modal2{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  padding:120px 20px;
+  background: rgba(51, 49, 49, 0.73);
+  display: block;
+  text-align: center;
+}
+#rr>img{
+  height: 114px;
+}
