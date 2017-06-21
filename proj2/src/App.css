@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.images{
+  position: relative;
+
+}
+.imagecard,.imagecard1,.imagecard2{
+  width: 60px;
+  height:70px;
+  display: inline-block;
+  position: absolute;
+}
+.imagecard1{
+  z-index: 2;
+  left:45%;
+  top:60px;
+}
+.imagecard{
+  z-index: 3;
+  left:50%;
+  top:90px;
+}
+.imagecard2{
+  z-index: 1;
+  left:40%;
+  top:30px;
+}
+.imgbtn{
+  position: absolute;
+  top: 115px;
+  z-index: 5;
+  left: 67%;}
