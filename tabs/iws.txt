@@ -1,0 +1,4 @@
+Accardion--- https://codepen.io/tofanelli/pen/waadRY
+collapse in-----https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_collapsible_in&stacked=h
+slider tab----https://bootsnipp.com/snippets/featured/form-wizard-using-tabs
+tab open div ----https://bootsnipp.com/snippets/ZlMjM

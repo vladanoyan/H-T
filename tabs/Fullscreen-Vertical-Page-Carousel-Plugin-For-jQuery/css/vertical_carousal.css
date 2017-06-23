@@ -1,0 +1,96 @@
+.vertical-carousel {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+#myVerticalCarousel {
+    height: 450px;
+    margin: 0;
+}
+.vertical-carousel-box,
+.vertical-carousel-box .item {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.vertical-carousel-box .item {
+  overflow: hidden;
+}
+.vertical-carousel-indicators {
+  z-index: 1000;
+  position: fixed;
+  top: 2%;
+  right: 30px;
+  text-align: center;
+  padding: 0;
+  margin: -40px 0 0 0;
+}
+.vertical-carousel-indicators li {
+    position: relative;
+    z-index: 1001;
+    list-style: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: 2px solid;
+    margin: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-carousel-indicators li:hover {
+     border: 2px solid;
+
+}
+.vertical-carousel-indicators li.active {
+      border: 2px solid;
+
+}
+
+.vertical-carousel-box {
+  -webkit-transition: transform 600ms;
+  -moz-transition: transform 600ms;
+  -ms-transition: transform 600ms;
+  -o-transition: transform 600ms;
+  transition: transform 600ms;
+}
+
+@media (max-width: 992px){
+  .vertical-carousel-indicators li {
+
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 40px 10px;
+}
+.vertical-carousel-indicators{
+  top:6%;
+  right:20px;
+
+}
+
+#myVerticalCarousel{
+  height: 400px;
+}
+}
+
+@media (max-width: 500px){
+  .vertical-carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    margin: 25px 0;
+}
+.vertical-carousel-indicators{
+  top:6%
+  right:20px;
+}
+
+#myVerticalCarousel{
+  height: 250px;
+}
+}
+/*# sourceMappingURL=vertical_carousal.css.map */
