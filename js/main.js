@@ -6,46 +6,48 @@ $('.homepage-slider').owlCarousel({
     items:1,
     autoplay:true,
     autoplayTimeout: 5000,
-    animateOut: 'fadeOut'
+    animateOut: 'fadeOut',
+
 })
 // /homepage slider
 
 // homepage clients quotes slider
 $('.ninth-section-carousel').owlCarousel({
     loop:true,
-    nav:true,
+    nav:false,
     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
     dots:1,
     items:1,
     margin: 50,
-    autoplay:true,
+    autoplay:false,
     autoplayTimeout: 5000,
+    animateOut: 'slideOutUp',
+    animateIn: 'slideInUp'
 })
 // homepage clients quotes slider
 
-// site first carousel
-$('.site-first-carousel').owlCarousel({
+// site second carousel
+$('.site-second-carousel').owlCarousel({
     loop:true,
-    nav:false,
-    dots:1,
-    center:true,
-    margin: 20,
-    autoplay:true,
+    nav:true,
+    dots:false,
+    navText: ["<" ,">"],
+    autoplay:false,
     autoplayHoverPause:true,
     autoplayTimeout: 5000,
-    responsive : {
-        0: {
-            items:1,
-            autoHeight:true
+    responsive:{
+        0:{
+            items:1
         },
-        992: {
-            items:2,
+        600:{
+            items:3
         },
-        1200: {
-            items:4,
+        1000:{
+            items:5
         }
     }
 })
+
 // /site first carousel
 
 // fonctionnalites-first-carousel
@@ -87,16 +89,6 @@ $(document).ready(function () {
 });
 // /mobileNavTrigger
 
-// carousels
-$('.flip-carousel').flipster({
-    style: 'carousel',
-    start: 0,
-    loop: true,
-    autoplay: 3000,
-    scrollwheel: false,
-    spacing: -0.5,
-    buttons: true,
-});
 // /carousels
 
 // page scrolling nagitaion
@@ -149,6 +141,195 @@ $("#contact-page-form, #logiciel-page-form-1, #logiciel-page-form-2, #logiciel-p
 
 
 });
-// /forms validation
-// -----------my
+// /forms validation end
 
+
+// scroll start
+/**
+ * jQuery Plugin to show up the button which scroll the page up to top.
+ * @author	Tommaso Simeone
+ * @link https://github.com/tomaggio83/Scroll-to-Top
+ * @version 1.0
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND COPYRIGHT
+ * HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED,
+ * INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR
+ * FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE
+ * OR DOCUMENTATION WILL NOT INFRINGE ANY THIRD PARTY PATENTS,
+ * COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.COPYRIGHT HOLDERS WILL NOT
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL
+ * DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENTATION.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://gnu.org/licenses/>.
+ */
+(function($){
+    'use strict';
+
+    var defaults = {
+        background : 'rgba(245, 8, 8, 0.66)', // Background color
+        color: '#fff', // Icon color
+        rounded: true, // if true make the button rounded
+        width: '40px',
+        height: '40px',
+        bottom : '25px', // Button bottom position
+        right : '25px', // Button right position
+        windowScrollShow: 400, // Window height after which show the button
+        speed: 800,
+        customHtml: '', // Set custom html for icon
+        mobileOnly: false // Show button only on mobile device
+    }
+
+    // ----------------------------------
+
+    $.fn.gotop = function( options ){
+
+        var opts = $.extend(true, {}, defaults, options)
+          ,   isMobile = $.fn.gotop.isMobile()
+          ,   $el = this;
+
+
+        return this.each(function(){
+            // Hide the element
+            $el.hide();
+
+            // ----------------------------------
+
+            // Make the button rounded
+            if(opts.rounded == true) {
+                $el.css('border-radius', '4px');
+            }
+
+            // ----------------------------------
+
+            // CSS
+            $el.css({
+                cursor: 'pointer',
+                position: 'fixed',
+                'align-items': 'center',
+                'justify-content': 'center',
+                background: opts.background,
+                color: opts.color,
+                width: opts.width,
+                height: opts.height,
+                bottom: opts.bottom,
+                right: opts.right
+            });
+
+            // ----------------------------------
+
+            // Set default icon if customHtml option is empty
+            if(opts.customHtml != '') {
+                $el.append(opts.customHtml);
+            } else {
+                $el.append('&uarr;');
+            }
+
+            // ----------------------------------
+
+            // Back to top
+            $el.click(function (e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop: 0}, opts.speed);
+            });
+
+            // ----------------------------------
+
+            // Show the scroll to top button only on mobile devices
+            if (opts.mobileOnly == true) {
+                if(isMobile) {
+                    $(window).scroll(function() {
+                        $.fn.gotop.showButton($el, opts.windowScrollShow);
+                    });
+                } else {
+                    return false;
+                }
+            }
+            else
+            {
+                // Show the scroll to top button on all devices
+                $(window).scroll(function() {
+                    $.fn.gotop.showButton($el, opts.windowScrollShow);
+                });
+            }
+
+            // ----------------------------------
+
+        });
+    };
+
+    // --------------------------------------------------------------------------
+
+    $.fn.gotop.isMobile = function() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // --------------------------------------------------------------------------
+
+    $.fn.gotop.showButton = function(element, windowScrollHeight) {
+
+        if( $(window).scrollTop() > windowScrollHeight ) {
+            element.fadeIn(400)
+              .css('display', 'flex');
+        } else {
+            element.fadeOut(400);
+        }
+    }
+
+    // --------------------------------------------------------------------------
+    $('#gotop').gotop({
+        customHtml: '<i class="fa fa-angle-up fa-2x"></i>',
+        bottom: '2em',
+        right: '2em'
+    });
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+}(jQuery));
+// scroll end
+
+
+// pagescroll_navbarSize start
+
+window.onscroll = function() {
+    if (window.pageYOffset > 2){
+        $('.header').css({'height':100+'px'});
+        $('.nav').css({'margin-top':10+'px'});
+    }
+    else {
+        $('.header').css({'height':200+'px'});
+        $('.nav').css({'margin-top':30+'px'});
+    }
+}
+
+// pagescroll_navbarSize END
+
+// pagescroll_navbarSize start homepage
+
+window.onscroll = function() {
+    if (window.pageYOffset > 2){
+        $('.header').css({'height':100+'px'});
+        $('.main-logo').css({'width':40+'%'});
+        $('.nav-home-page').css({'position':'fixed','background':'rgba(18, 21, 54, 0.86)','margin-top':0+'px','padding':5+'px'});
+    }
+    else {
+        $('.header').css({'height':200+'px'});
+        $('.main-logo').css({'width':80+'%'});
+        $('.nav-home-page').css({'position':'fixed','background':'transparent','margin-top':30+'px','padding':0+'px'});
+    }
+}
+
+// pagescroll_navbarSize END homepage
