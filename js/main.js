@@ -302,33 +302,21 @@ $("#contact-page-form, #logiciel-page-form-1, #logiciel-page-form-2, #logiciel-p
 // scroll end
 
 
-// pagescroll_navbarSize start
-
-window.onscroll = function() {
-    if (window.pageYOffset > 2){
-        $('.header').css({'height':100+'px'});
-        $('.nav').css({'margin-top':10+'px'});
-    }
-    else {
-        $('.header').css({'height':200+'px'});
-        $('.nav').css({'margin-top':30+'px'});
-    }
-}
-
-// pagescroll_navbarSize END
 
 // pagescroll_navbarSize start homepage
 
 window.onscroll = function() {
     if (window.pageYOffset > 2){
-        $('.header').css({'height':100+'px'});
-        $('.main-logo').css({'width':40+'%'});
-        $('.nav-home-page').css({'position':'fixed','background':'rgba(18, 21, 54, 0.86)','margin-top':0+'px','padding':5+'px'});
+        $('.nav').css({'margin-top':10+'px'});
+        $('.secondPage .header').css({'height':100+'px'});
+        $('.main-logo').css({'width':40+'%','top':30+'px'});
+        $('.nav-home-page').css({'position':'fixed','background':'rgba(18, 21, 54, 0.86)','margin-top':0+'px','padding':15+'px'});
     }
     else {
-        $('.header').css({'height':200+'px'});
-        $('.main-logo').css({'width':80+'%'});
-        $('.nav-home-page').css({'position':'fixed','background':'transparent','margin-top':30+'px','padding':0+'px'});
+        $('.nav').css({'margin-top':''});
+        $('.secondPage .header').css({'height':''});
+        $('.main-logo').css({'width':'','top':''});
+        $('.nav-home-page').css({'position':'','background':'','margin-top':'','padding':''});
     }
 }
 
