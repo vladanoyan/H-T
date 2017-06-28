@@ -942,14 +942,15 @@ nav {
 }
 }
 .footer-logo{
-  padding:20px;
+  padding:15px;
   img{
-    max-width: 80%;
+    max-width: 75%;
   }
   p{
-    font-size:13px;
+    font-size:12px;
     color: #8e8b8b;
     margin-top: 25px;
+    margin-bottom: 0;
   }
 }
 .scrolloff{
@@ -1640,7 +1641,7 @@ nav {
                 textarea{
                     height: 150px;
                     resize: none;
-                    min-width: 240px;
+                    min-width: 250px;
                     padding: 63px 0;
                     text-align: center;
                     border-top: 1px solid;
@@ -1672,6 +1673,37 @@ nav {
 }
 
 
-.reqruipment{
 
+.about{
+    margin-top: 200px;
+    padding:80px 0;
+    @media (max-width: 991px) {
+        margin-top: 100px;
+    }
+    .container{
+        padding:15px;
+        -webkit-box-shadow: 0px 0 21px 0px rgba(0, 0, 0, 0.13);
+        -moz-box-shadow: 0px 0 21px 0px rgba(0, 0, 0, 0.13);
+        box-shadow: 0px 0 21px 0px rgba(0, 0, 0, 0.13);
+    .section-box-inner{
+        .cover-image-area{
+            img{
+                width: 100%;
+            }
+        }
+        h2{
+            @media (max-width: 470px) {
+                font-size:20px;}
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}
+.reqruipment {
+    margin-top: 200px;
+    @media (max-width: 991px) {
+        margin-top: 100px;
+    }
+}
 }

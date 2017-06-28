@@ -680,13 +680,14 @@ nav {
         text-align: center; }
 
 .footer-logo {
-  padding: 20px; }
+  padding: 15px; }
   .footer-logo img {
-    max-width: 80%; }
+    max-width: 75%; }
   .footer-logo p {
-    font-size: 13px;
+    font-size: 12px;
     color: #8e8b8b;
-    margin-top: 25px; }
+    margin-top: 25px;
+    margin-bottom: 0; }
 
 .scrolloff {
   pointer-events: none; }
@@ -1212,7 +1213,7 @@ nav {
       .adducation .send-mail .mail .form-group textarea {
         height: 150px;
         resize: none;
-        min-width: 240px;
+        min-width: 250px;
         padding: 63px 0;
         text-align: center;
         border-top: 1px solid;
@@ -1235,5 +1236,29 @@ nav {
           -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
           -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75); }
+
+.about {
+  margin-top: 200px;
+  padding: 80px 0; }
+  @media (max-width: 991px) {
+    .about {
+      margin-top: 100px; } }
+  .about .container {
+    padding: 15px;
+    -webkit-box-shadow: 0px 0 21px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 0 21px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 0 21px 0px rgba(0, 0, 0, 0.13); }
+    .about .container .section-box-inner .cover-image-area img {
+      width: 100%; }
+    @media (max-width: 470px) {
+      .about .container .section-box-inner h2 {
+        font-size: 20px; } }
+    .about .container .section-box-inner p {
+      text-align: justify; }
+  .about .reqruipment {
+    margin-top: 200px; }
+    @media (max-width: 991px) {
+      .about .reqruipment {
+        margin-top: 100px; } }
 
 /*# sourceMappingURL=style.css.map */
