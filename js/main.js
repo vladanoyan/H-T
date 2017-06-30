@@ -10,22 +10,6 @@ $('.homepage-slider').owlCarousel({
 
 })
 // /homepage slider
-
-// homepage clients quotes slider
-$('.ninth-section-carousel').owlCarousel({
-    loop:true,
-    nav:false,
-    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-    dots:1,
-    items:1,
-    margin: 50,
-    autoplay:false,
-    autoplayTimeout: 5000,
-    animateOut: 'slideOutUp',
-    animateIn: 'slideInUp'
-})
-// homepage clients quotes slider
-
 // site second carousel
 $('.site-second-carousel').owlCarousel({
     loop:true,
@@ -48,33 +32,44 @@ $('.site-second-carousel').owlCarousel({
     }
 })
 
-// /site first carousel
-
-// fonctionnalites-first-carousel
-$('.fonctionnalites-first-carousel').owlCarousel({
+// homepage clients quotes slider
+$('.ninth-section-carousel').owlCarousel({
     loop:true,
-    nav:true,
+    nav:false,
     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
     dots:1,
     items:1,
-    center:true,
-    autoplay:true,
+    margin: 50,
+    autoplay:false,
     autoplayTimeout: 5000,
+    animateOut: 'slideOutUp',
+    animateIn: 'slideInUp'
 })
-// /fonctionnalites-first-carousel
+// homepage clients quotes slider
 
-// fonctionnalites-second-carousel
-$('.fonctionnalites-second-carousel').owlCarousel({
-    loop:true,
-    nav:false,
-    dots:1,
-    items:1,
-    center:true,
-    autoplay:true,
-    autoplayTimeout: 5000,
-})
-// /fonctionnalites-second-carousel
 
+
+$(".next-step").click(function (e) {
+
+    var $active = $('.nav-tabs li.active');
+    $active.next().removeClass('disabled');
+    nextTab($active);
+
+});
+$(".prev-step").click(function (e) {
+
+    var $active = $('.nav-tabs li.active');
+    prevTab($active);
+
+});
+
+
+function nextTab(elem) {
+    $(elem).next().find('a[data-toggle="tab"]').click();
+}
+function prevTab(elem) {
+    $(elem).prev().find('a[data-toggle="tab"]').click();
+}
 // mobileNavTrigger
 $(document).ready(function () {
     $('.mobile-nav-trigger').click(function () {
@@ -135,12 +130,48 @@ $("#contact-page-form, #logiciel-page-form-1, #logiciel-page-form-2, #logiciel-p
             }
         }
     }
-
-
-
-
-
 });
+
+// input file
+$(document).on('click', '.browse', function(){
+    var file = $(this).parent().parent().parent().find('.file');
+    file.trigger('click');
+});
+$(document).on('change', '.file', function(){
+    $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+});
+// input file
+
+// Our Servise
+
+$(".one-b").click(function() {
+    $('#collapseExample1,#collapseExample2,#collapseExample4,#collapseExample3,.tab-pane').removeClass('in','active');
+    $('ul li').removeClass('active');
+    $('.two-b,.tree-b,.five-b,four-b').addClass('collapsed');
+});
+$(".two-b").click(function() {
+    $('#collapseExample,#collapseExample2,#collapseExample4,#collapseExample3,.tab-pane').removeClass('in','active');
+    $('ul li').removeClass('active');
+    $('.one-b,.tree-b,.five-b,four-b').addClass('collapsed');
+});
+$(".tree-b").click(function() {
+    $('#collapseExample1,#collapseExample,#collapseExample4,#collapseExample3,.tab-pane').removeClass('in','active');
+    $('ul li').removeClass('active');
+    $('.one-b,.two-b,.five-b,four-b').addClass('collapsed');
+});
+$(".four-b").click(function() {
+    $('#collapseExample1,#collapseExample2,#collapseExample4,#collapseExample,.tab-pane').removeClass('in','active');
+    $('ul li').removeClass('active');
+    $('.one-b,.two-b,.five-b,.tree-b').addClass('collapsed');
+});
+$(".five-b").click(function() {
+    $('#collapseExample1,#collapseExample2,#collapseExample3,#collapseExample,.tab-pane').removeClass('in','active');
+    $('ul li').removeClass('active');
+    $('.one-b,.two-b,.tree-b,.four-b').addClass('collapsed');
+});
+
+// Our Servise
+
 // /forms validation end
 
 
@@ -185,29 +216,29 @@ $("#contact-page-form, #logiciel-page-form-1, #logiciel-page-form-2, #logiciel-p
         mobileOnly: false // Show button only on mobile device
     }
 
-    // ----------------------------------
+// ----------------------------------
 
     $.fn.gotop = function( options ){
 
         var opts = $.extend(true, {}, defaults, options)
-          ,   isMobile = $.fn.gotop.isMobile()
-          ,   $el = this;
+            ,   isMobile = $.fn.gotop.isMobile()
+            ,   $el = this;
 
 
         return this.each(function(){
-            // Hide the element
+// Hide the element
             $el.hide();
 
-            // ----------------------------------
+// ----------------------------------
 
-            // Make the button rounded
+// Make the button rounded
             if(opts.rounded == true) {
                 $el.css('border-radius', '4px');
             }
 
-            // ----------------------------------
+// ----------------------------------
 
-            // CSS
+// CSS
             $el.css({
                 cursor: 'pointer',
                 position: 'fixed',
@@ -221,26 +252,26 @@ $("#contact-page-form, #logiciel-page-form-1, #logiciel-page-form-2, #logiciel-p
                 right: opts.right
             });
 
-            // ----------------------------------
+// ----------------------------------
 
-            // Set default icon if customHtml option is empty
+// Set default icon if customHtml option is empty
             if(opts.customHtml != '') {
                 $el.append(opts.customHtml);
             } else {
                 $el.append('&uarr;');
             }
 
-            // ----------------------------------
+// ----------------------------------
 
-            // Back to top
+// Back to top
             $el.click(function (e) {
                 e.preventDefault();
                 $('html, body').animate({scrollTop: 0}, opts.speed);
             });
 
-            // ----------------------------------
+// ----------------------------------
 
-            // Show the scroll to top button only on mobile devices
+// Show the scroll to top button only on mobile devices
             if (opts.mobileOnly == true) {
                 if(isMobile) {
                     $(window).scroll(function() {
@@ -252,36 +283,36 @@ $("#contact-page-form, #logiciel-page-form-1, #logiciel-page-form-2, #logiciel-p
             }
             else
             {
-                // Show the scroll to top button on all devices
+// Show the scroll to top button on all devices
                 $(window).scroll(function() {
                     $.fn.gotop.showButton($el, opts.windowScrollShow);
                 });
             }
 
-            // ----------------------------------
+// ----------------------------------
 
         });
     };
 
-    // --------------------------------------------------------------------------
+// --------------------------------------------------------------------------
 
     $.fn.gotop.isMobile = function() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
 
-    // --------------------------------------------------------------------------
+// --------------------------------------------------------------------------
 
     $.fn.gotop.showButton = function(element, windowScrollHeight) {
 
         if( $(window).scrollTop() > windowScrollHeight ) {
             element.fadeIn(400)
-              .css('display', 'flex');
+                .css('display', 'flex');
         } else {
             element.fadeOut(400);
         }
     }
 
-    // --------------------------------------------------------------------------
+// --------------------------------------------------------------------------
     $('#gotop').gotop({
         customHtml: '<i class="fa fa-angle-up fa-2x"></i>',
         bottom: '2em',

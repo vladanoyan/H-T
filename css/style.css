@@ -601,7 +601,7 @@ nav {
       color: #8e8b8b; }
     .our-team .row img {
       margin: 0 auto;
-      border: 2px solid #948b8b; }
+      border: 3px solid #0c112b; }
 
 .footer-shadow {
   -webkit-box-shadow: inset 0px 9px 21px 0px rgba(0, 0, 0, 0.13);
@@ -628,35 +628,37 @@ nav {
         font-size: 60px;
         line-height: 5px;
         margin-right: 10px; }
-  .footer .information .mail input {
-    background: #0e0b17;
-    color: #eee;
-    float: left;
-    border: none;
-    height: 40px;
-    width: 75%;
-    padding: 0 15px;
-    outline: none;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0; }
-  .footer .information .mail button {
-    background: #3c3947;
-    color: #fff;
-    border: none;
-    width: 25%;
-    height: 40px;
-    outline: none;
-    border-top-right-radius: 4px; }
-  .footer .information .mail form textarea {
-    line-height: 2em;
-    resize: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-top: 50px;
-    text-align: center;
-    height: 140px; }
+  .footer .information .mail {
+    text-align: center; }
+    .footer .information .mail input {
+      background: #0e0b17;
+      color: #eee;
+      float: left;
+      border: none;
+      height: 40px;
+      width: 75%;
+      padding: 0 15px;
+      outline: none;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
+    .footer .information .mail button {
+      background: #3c3947;
+      color: #fff;
+      border: none;
+      width: 25%;
+      height: 40px;
+      outline: none;
+      border-top-right-radius: 4px; }
+    .footer .information .mail form textarea {
+      line-height: 2em;
+      resize: none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      padding-top: 50px;
+      text-align: center;
+      height: 140px; }
   .footer .information .social img {
     width: 120px;
     margin: 10px 0; }
@@ -1108,7 +1110,9 @@ nav {
             .adducation .info .form-col-wrapper .form-input-group-m1 .form-input-addon label {
               padding: 7px;
               color: #FFFFFF;
-              background-color: #0c112b;
+              background-image: -moz-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+              background-image: -webkit-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+              background-image: -ms-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
               border: 1px solid #0c112b;
               height: 34px;
               font-weight: 300;
@@ -1121,7 +1125,7 @@ nav {
                 height: 0px;
                 border-style: solid;
                 border-width: 16px 20px 16px 0;
-                border-color: transparent #0c112b transparent transparent;
+                border-color: transparent #191e41 transparent transparent;
                 display: inline-block;
                 vertical-align: middle;
                 transform: rotate(180deg);
@@ -1129,7 +1133,7 @@ nav {
                 top: 1px;
                 z-index: 99;
                 right: -3px;
-                background: #fcf5f5; } }
+                background: #fff; } }
         .adducation .info .form-col-wrapper .form-input-group-m1 .form-control {
           display: block;
           width: 100%;
@@ -1152,7 +1156,9 @@ nav {
         margin-top: 15px; } }
     .adducation .info .chekboxes h5 {
       color: #fff;
-      background: #0c112b;
+      background-image: -moz-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+      background-image: -webkit-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+      background-image: -ms-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
       margin: 0;
       padding: 9px;
       text-align: center;
@@ -1223,7 +1229,9 @@ nav {
       .adducation .send-mail .mail button {
         font-style: italic;
         color: #fff;
-        background: #0c112b;
+        background-image: -moz-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+        background-image: -webkit-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+        background-image: -ms-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
         padding: 5px 45px;
         outline: none;
         -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
@@ -1255,10 +1263,175 @@ nav {
         font-size: 20px; } }
     .about .container .section-box-inner p {
       text-align: justify; }
-  .about .reqruipment {
-    margin-top: 200px; }
-    @media (max-width: 991px) {
-      .about .reqruipment {
-        margin-top: 100px; } }
+
+.reqruipment {
+  margin-top: 250px; }
+  @media (max-width: 991px) {
+    .reqruipment {
+      margin-top: 150px; } }
+  .reqruipment .accordion-toggle {
+    font-style: italic;
+    color: #fff;
+    background-image: -moz-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+    background-image: -webkit-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+    background-image: -ms-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+    padding: 4px 0;
+    outline: none;
+    transition: all 0.5s;
+    border-color: #141834;
+    margin-bottom: 5px;
+    width: 100%; }
+    .reqruipment .accordion-toggle:hover {
+      margin-top: 3px; }
+    @media (max-width: 470px) {
+      .reqruipment .accordion-toggle {
+        font-size: 12px;
+        padding: 4px 0; } }
+    .reqruipment .accordion-toggle:after {
+      /* symbol for "opening" panels */
+      font-family: 'Glyphicons Halflings';
+      /* essential for enabling glyphicon */
+      content: "\e114";
+      /* adjust as needed, taken from bootstrap.css */
+      float: right;
+      /* adjust as needed */
+      color: #fff;
+      /* adjust as needed */
+      margin: 0 30px;
+      font-style: normal; }
+  .reqruipment .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";
+    /* adjust as needed, taken from bootstrap.css */ }
+  .reqruipment .work-buttons {
+    margin: 5px 0; }
+    .reqruipment .work-buttons .nav-tabs > li.active > a, .reqruipment .work-buttons .nav-tabs > li.active > a:focus, .reqruipment .work-buttons .nav-tabs > li.active > a:hover {
+      border: none;
+      display: inline-block; }
+    .reqruipment .work-buttons .nav-stacked > li {
+      margin-top: 0;
+      text-align: center; }
+    .reqruipment .work-buttons .nav-tabs > li > a {
+      color: #848080;
+      margin: 0;
+      border: none;
+      padding: 10px 0;
+      display: inline-block;
+      font-weight: 700;
+      font-size: 16px; }
+      @media (max-width: 470px) {
+        .reqruipment .work-buttons .nav-tabs > li > a {
+          font-size: 12px;
+          padding: 7px; } }
+    .reqruipment .work-buttons .nav-tabs > li > a:hover, .reqruipment .work-buttons .nav-tabs > li > a:focus {
+      color: #161a39;
+      z-index: 99;
+      transition: all 0.5s ease 0s; }
+    .reqruipment .work-buttons .nav-tabs > li.active > a {
+      color: #161a39;
+      z-index: 100;
+      border: none; }
+    .reqruipment .work-buttons .nav-tabs > li.active > a:hover, .reqruipment .work-buttons .nav-tabs > li.active > a:focus {
+      color: #161a39;
+      transition: all 0.5s ease 0s;
+      border: none; }
+    .reqruipment .work-buttons .nav-tabs > li > a:hover {
+      border: none;
+      background: transparent; }
+    .reqruipment .work-buttons .nav-tabs {
+      border: none; }
+      .reqruipment .work-buttons .nav-tabs li:before {
+        content: ".";
+        font-size: 60px;
+        line-height: 5px;
+        margin-right: 10px;
+        color: red; }
+  .reqruipment .tab-content .tab-pane {
+    padding: 0 0 40px 0; }
+    .reqruipment .tab-content .tab-pane h4 {
+      color: red;
+      font-style: italic;
+      font-size: 16px; }
+      @media (max-width: 470px) {
+        .reqruipment .tab-content .tab-pane h4 {
+          font-size: 14px; } }
+      .reqruipment .tab-content .tab-pane h4 span {
+        color: #000;
+        font-style: italic;
+        font-size: 16px; }
+        @media (max-width: 470px) {
+          .reqruipment .tab-content .tab-pane h4 span {
+            font-size: 14px; } }
+    .reqruipment .tab-content .tab-pane hr {
+      border-color: #000; }
+    .reqruipment .tab-content .tab-pane .btn {
+      font-style: italic;
+      color: #fff;
+      background-image: -moz-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+      background-image: -webkit-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+      background-image: -ms-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+      padding: 5px 45px;
+      outline: none;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      transition: all 0.5s;
+      border: none;
+      border-radius: 0; }
+      .reqruipment .tab-content .tab-pane .btn:hover {
+        margin-top: 3px;
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75); }
+  .reqruipment .tab-content #demo, .reqruipment .tab-content #demo1, .reqruipment .tab-content #demo3, .reqruipment .tab-content #demo4, .reqruipment .tab-content #demo5, .reqruipment .tab-content #demo6 {
+    padding: 20px 0; }
+    .reqruipment .tab-content #demo .h4, .reqruipment .tab-content #demo1 .h4, .reqruipment .tab-content #demo3 .h4, .reqruipment .tab-content #demo4 .h4, .reqruipment .tab-content #demo5 .h4, .reqruipment .tab-content #demo6 .h4 {
+      color: #000 !important;
+      text-align: center !important;
+      padding: 0px 0 20px 0;
+      font-style: italic;
+      font-size: 20px; }
+    .reqruipment .tab-content #demo .file, .reqruipment .tab-content #demo1 .file, .reqruipment .tab-content #demo3 .file, .reqruipment .tab-content #demo4 .file, .reqruipment .tab-content #demo5 .file, .reqruipment .tab-content #demo6 .file {
+      visibility: hidden;
+      position: absolute;
+      width: 100%; }
+    .reqruipment .tab-content #demo .form-col-wrapper .form-col-wrapper, .reqruipment .tab-content #demo1 .form-col-wrapper .form-col-wrapper, .reqruipment .tab-content #demo3 .form-col-wrapper .form-col-wrapper, .reqruipment .tab-content #demo4 .form-col-wrapper .form-col-wrapper, .reqruipment .tab-content #demo5 .form-col-wrapper .form-col-wrapper, .reqruipment .tab-content #demo6 .form-col-wrapper .form-col-wrapper {
+      padding: 0; }
+      .reqruipment .tab-content #demo .form-col-wrapper .form-col-wrapper .form-input-group-m1 .form-input-addon, .reqruipment .tab-content #demo1 .form-col-wrapper .form-col-wrapper .form-input-group-m1 .form-input-addon, .reqruipment .tab-content #demo3 .form-col-wrapper .form-col-wrapper .form-input-group-m1 .form-input-addon, .reqruipment .tab-content #demo4 .form-col-wrapper .form-col-wrapper .form-input-group-m1 .form-input-addon, .reqruipment .tab-content #demo5 .form-col-wrapper .form-col-wrapper .form-input-group-m1 .form-input-addon, .reqruipment .tab-content #demo6 .form-col-wrapper .form-col-wrapper .form-input-group-m1 .form-input-addon {
+        text-align: left; }
+      .reqruipment .tab-content #demo .form-col-wrapper .form-col-wrapper .form-group, .reqruipment .tab-content #demo1 .form-col-wrapper .form-col-wrapper .form-group, .reqruipment .tab-content #demo3 .form-col-wrapper .form-col-wrapper .form-group, .reqruipment .tab-content #demo4 .form-col-wrapper .form-col-wrapper .form-group, .reqruipment .tab-content #demo5 .form-col-wrapper .form-col-wrapper .form-group, .reqruipment .tab-content #demo6 .form-col-wrapper .form-col-wrapper .form-group {
+        text-align: center; }
+        .reqruipment .tab-content #demo .form-col-wrapper .form-col-wrapper .form-group .input-group .input-group-addon, .reqruipment .tab-content #demo1 .form-col-wrapper .form-col-wrapper .form-group .input-group .input-group-addon, .reqruipment .tab-content #demo3 .form-col-wrapper .form-col-wrapper .form-group .input-group .input-group-addon, .reqruipment .tab-content #demo4 .form-col-wrapper .form-col-wrapper .form-group .input-group .input-group-addon, .reqruipment .tab-content #demo5 .form-col-wrapper .form-col-wrapper .form-group .input-group .input-group-addon, .reqruipment .tab-content #demo6 .form-col-wrapper .form-col-wrapper .form-group .input-group .input-group-addon {
+          padding: 2px 10px;
+          font-size: 12px; }
+        .reqruipment .tab-content #demo .form-col-wrapper .form-col-wrapper .form-group .input-group .form-control, .reqruipment .tab-content #demo1 .form-col-wrapper .form-col-wrapper .form-group .input-group .form-control, .reqruipment .tab-content #demo3 .form-col-wrapper .form-col-wrapper .form-group .input-group .form-control, .reqruipment .tab-content #demo4 .form-col-wrapper .form-col-wrapper .form-group .input-group .form-control, .reqruipment .tab-content #demo5 .form-col-wrapper .form-col-wrapper .form-group .input-group .form-control, .reqruipment .tab-content #demo6 .form-col-wrapper .form-col-wrapper .form-group .input-group .form-control {
+          height: 35px;
+          font-size: 14px; }
+        .reqruipment .tab-content #demo .form-col-wrapper .form-col-wrapper .form-group .input-group .browse, .reqruipment .tab-content #demo1 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse, .reqruipment .tab-content #demo3 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse, .reqruipment .tab-content #demo4 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse, .reqruipment .tab-content #demo5 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse, .reqruipment .tab-content #demo6 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse {
+          outline: none;
+          border: none;
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+          height: 35px;
+          padding: 0px 10px;
+          font-size: 13px;
+          color: #fff;
+          line-height: 35px;
+          background-image: -moz-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+          background-image: -webkit-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+          background-image: -ms-linear-gradient(0deg, #090b1a 0%, #1d224a 100%);
+          transition: opacity 0.5s; }
+          .reqruipment .tab-content #demo .form-col-wrapper .form-col-wrapper .form-group .input-group .browse:hover, .reqruipment .tab-content #demo1 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse:hover, .reqruipment .tab-content #demo3 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse:hover, .reqruipment .tab-content #demo4 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse:hover, .reqruipment .tab-content #demo5 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse:hover, .reqruipment .tab-content #demo6 .form-col-wrapper .form-col-wrapper .form-group .input-group .browse:hover {
+            opacity: 0.8; }
+
+.validetta-inline--bottom {
+  color: red;
+  display: inline-block;
+  text-align: center;
+  padding: 4px;
+  border-radius: 5px;
+  position: relative;
+  top: 0;
+  z-index: 9; }
 
 /*# sourceMappingURL=style.css.map */
