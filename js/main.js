@@ -16,7 +16,7 @@ $('.site-second-carousel').owlCarousel({
     nav:true,
     dots:false,
     navText: ["<" ,">"],
-    autoplay:false,
+    autoplay:true,
     autoplayHoverPause:true,
     autoplayTimeout: 5000,
     responsive:{
