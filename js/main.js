@@ -48,7 +48,6 @@ $('.ninth-section-carousel').owlCarousel({
 // homepage clients quotes slider
 
 
-
 $(".next-step").click(function (e) {
 
     var $active = $('.nav-tabs li.active');
@@ -145,29 +144,34 @@ $(document).on('change', '.file', function(){
 // Our Servise
 
 $(".one-b").click(function() {
-    $('#collapseExample1,#collapseExample2,#collapseExample4,#collapseExample3,.tab-pane').removeClass('in','active');
-    $('ul li').removeClass('active');
-    $('.two-b,.tree-b,.five-b,four-b').addClass('collapsed');
+    $('#collapseExample1,#collapseExample2,#collapseExample4,#collapseExample3,.tab-pane,#home3,#home1,#home4,#home5,#home6,#collapseExample li:last-child').removeClass('in active');
+    $('.two-b,.tree-b,.five-b,.four-b').addClass('collapsed');
+    $('#home,#collapseExample li:first-child').addClass('in active');
+
 });
 $(".two-b").click(function() {
-    $('#collapseExample,#collapseExample2,#collapseExample4,#collapseExample3,.tab-pane').removeClass('in','active');
-    $('ul li').removeClass('active');
-    $('.one-b,.tree-b,.five-b,four-b').addClass('collapsed');
+    $('#collapseExample,#collapseExample2,#collapseExample4,#collapseExample3,.tab-pane,#home1,#home,#home4,#home5,#home6').removeClass('in active');
+    $('.one-b,.tree-b,.five-b,.four-b').addClass('collapsed');
+    $('#home3').addClass('in active');
+
 });
 $(".tree-b").click(function() {
-    $('#collapseExample1,#collapseExample,#collapseExample4,#collapseExample3,.tab-pane').removeClass('in','active');
-    $('ul li').removeClass('active');
-    $('.one-b,.two-b,.five-b,four-b').addClass('collapsed');
+    $('#collapseExample1,#collapseExample,#collapseExample4,#collapseExample3,.tab-pane,#home1,#home,#home3,#home5,#home6').removeClass('in active');
+    $('.one-b,.two-b,.five-b,.four-b').addClass('collapsed');
+    $('#home4').addClass('in active');
+
 });
 $(".four-b").click(function() {
-    $('#collapseExample1,#collapseExample2,#collapseExample4,#collapseExample,.tab-pane').removeClass('in','active');
-    $('ul li').removeClass('active');
+    $('#collapseExample1,#collapseExample2,#collapseExample4,#collapseExample,.tab-pane,#home1,#home,#home3,#home4,#home6').removeClass('in active');
     $('.one-b,.two-b,.five-b,.tree-b').addClass('collapsed');
+    $('#home5').addClass('in active');
+
 });
 $(".five-b").click(function() {
-    $('#collapseExample1,#collapseExample2,#collapseExample3,#collapseExample,.tab-pane').removeClass('in','active');
-    $('ul li').removeClass('active');
+    $('#collapseExample1,#collapseExample2,#collapseExample3,#collapseExample,.tab-pane,#home1,#home,#home4,#home5,#home3').removeClass('in active');
     $('.one-b,.two-b,.tree-b,.four-b').addClass('collapsed');
+    $('#home6').addClass('in active');
+
 });
 
 // Our Servise

@@ -573,7 +573,7 @@ nav {
         }
     }
     .slide2{
-        height: 420px;
+        height: 440px;
 
 }
 }
@@ -598,7 +598,7 @@ nav {
       height: 40px;
 
 
-      &:hover{
+      &:hover {
     background: rgba(0, 0, 0, 0.64);
     padding-right: 258px;
     border-radius: 60px;
@@ -652,7 +652,10 @@ nav {
     content: "Application and Softwere" ;
     @extend .myclass;
 }
-
+.active span::before {
+    background-color: #0b0f22!important;
+    color:#fff!important;
+    }
 .owl-dot:first-child span::before {
     content: "1";
     @extend .myclass1;
@@ -686,7 +689,7 @@ nav {
     @extend .myclass1;
 }
 .owl-dot:nth-child(5):hover span::after {
-    content: "Security, Sistem, Network" ;
+    content: "Security, System, Network" ;
     @extend .myclass;
 
 }
@@ -880,7 +883,15 @@ nav {
     }
     .mail{
         text-align: center;
-      input{
+        .valid-input{
+            position: relative;
+            span.validetta-inline--bottom{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                top: 21px;
+            }
+        input{
         background: #0e0b17;
         color:#eee;
         float: left;
@@ -903,24 +914,28 @@ nav {
         outline:none;
         border-top-right-radius: 4px;
       }
-      form{
-        textarea{
-        line-height: 2em;
-        resize: none;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        padding-top: 50px;
-        text-align: center;
-        height: 140px;
+    }
+        .form-group{
+            position: relative;
+            textarea{
+                line-height: 2em;
+                resize: none;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                padding-top: 50px;
+                text-align: center;
+                height: 140px;
+            }
+            span.validetta-inline--bottom{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                top: 65%;
+            }
+
         }
-      }
     }
-    .social{
-      img{
-        width:120px;
-        margin:10px 0;
-      }
-    }
+
     .fa-phone{
         color: red;
     &:before {
@@ -942,6 +957,11 @@ nav {
             width: 25px;
             text-align: center;
           }
+        }
+        .con-A{
+            font-size: 14px;
+            color: #8e8b8b;
+
         }
     }
 }
@@ -1148,6 +1168,7 @@ nav {
                         padding: 0;
                         img {
                             width: 100%;
+                            height:330px;
                         }
 
                     }
@@ -1362,7 +1383,7 @@ nav {
             height: 40px;
             align-items: center;
             color: #fff;
-            margin: 10px auto;
+            margin: 3px auto;
             padding: 10px;
 
         }
@@ -1384,6 +1405,9 @@ nav {
         padding: 0;
         margin: 80px 0 0 0;
         li{
+            @media (min-width: 768px){
+            width: 12.5%;
+            }
 
             padding: 0;
             a{
@@ -1494,7 +1518,14 @@ nav {
         .form-col-wrapper {
             padding: 0;
         .form-input-group-m1 {
+            position: relative;
             margin-bottom: 0;
+            span.validetta-inline--bottom{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                top: 50%;
+            }
           > div {
                 padding-left: 0;
                 padding-right: 0;
@@ -1648,6 +1679,13 @@ nav {
             text-align: center;
             padding:80px 0;
             .form-group{
+                position: relative;
+                span.validetta-inline--bottom{
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    top: 65%;
+                }
                 textarea{
                     height: 150px;
                     resize: none;
@@ -1720,17 +1758,20 @@ nav {
     .accordion-toggle{
         font-style: italic;
         color: #fff;
-        background-image: -moz-linear-gradient( 0deg, rgb(9,11,26) 0%, rgb(29,34,74) 100%);
-        background-image: -webkit-linear-gradient( 0deg, rgb(9,11,26) 0%, rgb(29,34,74) 100%);
-        background-image: -ms-linear-gradient( 0deg, rgb(9,11,26) 0%, rgb(29,34,74) 100%);
+        background-image: -moz-linear-gradient(0deg, #090b1a 0%, rgba(29, 34, 74, 0.67) 100%);
+        background-image: -webkit-linear-gradient(0deg, #090b1a 0%, rgba(29, 34, 74, 0.67) 100%);
+        background-image: -ms-linear-gradient(0deg, #090b1a 0%, rgba(29, 34, 74, 0.67) 100%);
         padding: 4px 0;
         outline: none;
-        transition:all 0.5s;
+        transition:all 5s;
         border-color: #141834;
         margin-bottom: 5px;
         width: 100%;
         &:hover {
-            margin-top: 3px;
+            background-image: -moz-linear-gradient(0deg, #090b1a 0%, rgba(29, 34, 74, 0.67) 100%);
+            background-image: -webkit-linear-gradient(0deg, #090b1a 0%, rgba(29, 34, 74, 0.67) 100%);
+            background-image: -ms-linear-gradient(0deg, #090b1a 0%, rgba(29, 34, 74, 0.67) 100%);
+
         }
         @media (max-width: 470px) {
             font-size:12px;
@@ -1747,7 +1788,11 @@ nav {
                 font-style: normal;
             }
     }
-
+    button.collapsed{
+        background-image: -moz-linear-gradient( 0deg, rgb(9,11,26) 0%, rgb(29,34,74) 100%);
+        background-image: -webkit-linear-gradient( 0deg, rgb(9,11,26) 0%, rgb(29,34,74) 100%);
+        background-image: -ms-linear-gradient( 0deg, rgb(9,11,26) 0%, rgb(29,34,74) 100%);
+    }
     .accordion-toggle.collapsed:after {
                 /* symbol for "collapsed" panels */
                 content: "\e080";    /* adjust as needed, taken from bootstrap.css */
@@ -1878,7 +1923,14 @@ nav {
                         }
                     }
         .form-group{
+            position: relative;
             text-align: center;
+            span.validetta-inline--bottom{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                top: 50%;
+            }
             .input-group{
 
                 .input-group-addon{
